@@ -70,11 +70,13 @@ gem 'mailman', require: false
 # To convert html to markdown
 gem 'reverse_markdown'
 
+ gem 'mysql2', '>= 0.4.4'
+
 # run with `bundle install --without production` or `bundle install --without mysql` to exclude this
-group :mysql, :production do
-  gem 'mysql2', '>= 0.4.4'
-  # mysql 0.4.3+ causes a version mismatch, apparently, and demands 'activerecord-mysql2-adapter'
-end
+# group :mysql, :production do
+#   gem 'mysql2', '>= 0.4.4'
+#   # mysql 0.4.3+ causes a version mismatch, apparently, and demands 'activerecord-mysql2-adapter'
+# end
 
 group :sqlite, :development do
   gem 'sqlite3', '~> 1.3.6'
